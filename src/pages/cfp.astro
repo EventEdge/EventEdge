@@ -2,14 +2,26 @@
 import {SITE_TITLE} from "../consts";
 import Layout from "../layouts/Layout.astro";
 import HeaderHero from '../components/HeaderHero.astro';
+import Topic from '../components/Topic.astro';
 ---
 
 
-<Layout title={SITE_TITLE}>
+<Layout title='Call For Papers'>
     <main>
         <HeaderHero>
-            <span slot="title">CFP</span>
+            <span slot="title">Call For Papers</span>
             <span slot="description">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</span>
         </HeaderHero>
+
+        <section class="max-w-screen-lg m-auto">
+            <h2 class="text-4xl text-center font-bold mt-8 mb-12">Topics</h2>
+
+            <ul class="flex flex-wrap gap-8">
+                <li><Topic title='Web' /></li>
+                <li><Topic title='UI/UX' /></li>
+                <li><Topic title='Testing' /></li>
+                <li><Topic title="Cloud" /></li>
+            </ul>
+        </section>
     </main>
 </Layout>
