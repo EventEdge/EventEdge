@@ -1,0 +1,37 @@
+---
+import Speaker from '../components/Speaker.astro'
+import {SITE_TITLE} from "../consts";
+import Layout from "../layouts/Layout.astro";
+
+const speakers: Array<Speaker> = [
+    {name: 'Jane Doe', description: 'Senior Software Engineer at XX • GitHub Star'},
+    {name: 'Jane Doe', description: 'Senior Software Engineer at XX • GitHub Star'},
+    {name: 'Jane Doe', description: 'Senior Software Engineer at XX • GitHub Star'},
+    {name: 'Jane Doe', description: 'Senior Software Engineer at XX • GitHub Star'},
+    {name: 'Jane Doe', description: 'Senior Software Engineer at XX • GitHub Star'},
+    {name: 'Jane Doe', description: 'Senior Software Engineer at XX • GitHub Star'},
+];
+---
+
+
+<Layout title={SITE_TITLE}>
+    <main>
+        <div class="hero" style="background-image: url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg);">
+            <div class="hero-overlay bg-opacity-60"></div>
+            <div class="hero-content text-center text-neutral-content">
+                <div class="max-w-md">
+                    <h1 class="mb-5 text-5xl font-bold">Speakers</h1>
+                    <p class="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                </div>
+            </div>
+        </div>
+        <ul class="flex flex-wrap gap-x-20 gap-y-8 mt-12 max-w-screen-lg m-auto">
+            {speakers.map(speaker =>
+                    <li>
+                        <a href={speaker.name}>
+                            <Speaker speaker={speaker}/>
+                        </a>
+                    </li>)}
+        </ul>
+    </main>
+</Layout>
