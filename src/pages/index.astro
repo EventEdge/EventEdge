@@ -1,9 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import {SITE_TITLE} from "../consts";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title={SITE_TITLE}>
 	<main>
 		<div class="hero min-h-screen">
 			<div class="hero-content text-center">
