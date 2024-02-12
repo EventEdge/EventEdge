@@ -10,4 +10,12 @@ export const NAVIGATION_LINKS: Array<INavigationLink> = [
     {title: 'CoC', href: '/coc'},
     {title: 'CFP', href: '/cfp'},
     {title: 'Venue', href: '/venue'},
-]
+];
+
+export const SOCIAL_LINKS = {
+    twitter: 'https://twitter.com/eventedge',
+    facebook: 'https://facebook.com/eventedge',
+    // TODO : add logo for linkedin: 'https://linkedin.com/company/eventedge',
+    // TODO : add logo for linkedin: instagram: 'https://instagram.com/eventedge',
+    youtube: 'https://youtube.com/eventedge',
+};
