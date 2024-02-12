@@ -1,8 +1,9 @@
 ---
-import {Speaker} from "../models/speaker.model";
+import {type ISpeaker} from "../models/speaker.model";
 import {Image} from 'astro:assets';
+
 export interface Props {
-    speaker: Speaker;
+    speaker: ISpeaker;
 }
 
 const {speaker} = Astro.props;

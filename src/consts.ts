@@ -1,8 +1,8 @@
-import type {NavigationLink} from "./models/navigation-link.model.ts";
+import type {INavigationLink} from "./models/navigation-link.model.ts";
 
 export const SITE_TITLE = "EventEdge";
 
-export const NAVIGATION_LINKS: Array<NavigationLink> = [
+export const NAVIGATION_LINKS: Array<INavigationLink> = [
     {title: 'Agenda', href: 'agenda'},
     {title: 'Speakers', href: 'speakers'},
     {title: 'Sponsors', href: 'sponsors'},

@@ -3,8 +3,9 @@ import Speaker from '../components/Speaker.astro'
 import {SITE_TITLE} from "../consts";
 import Layout from "../layouts/Layout.astro";
 import HeaderHero from '../components/HeaderHero.astro';
+import {type ISpeaker} from "../models/speaker.model";
 
-const speakers: Array<Speaker> = [
+const speakers: Array<ISpeaker> = [
     {name: 'Jane Doe', description: 'Senior Software Engineer at XX • GitHub Star'},
     {name: 'Jane Doe', description: 'Senior Software Engineer at XX • GitHub Star'},
     {name: 'Jane Doe', description: 'Senior Software Engineer at XX • GitHub Star'},
