@@ -6,7 +6,7 @@ const crew = defineCollection({
 		name: z.string(),
 		title: z.string(),
 		bio: z.string(),
-		heroImage: z.string().optional(),
+		heroImage: z.string(),
 	}),
 });
 
