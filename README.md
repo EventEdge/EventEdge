@@ -52,3 +52,22 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+
+### CFP (Call for Papers)
+
+This page describes the process for submitting a proposal to speak at the conference event.
+
+#### Problem
+
+When organizing a conference, it's important to have a clear and easy way for potential speakers to submit their proposals. This process should be easy to understand and should provide a clear path for the speaker to follow.
+
+#### Solution
+
+The CFP (Call for Papers) page should include the following information:
+
+- A clear description of the conference and its theme
+- A list of topics that the conference is interested in
+- A clear explanation of the submission process
+- A form for the speaker to submit their proposal
+- A deadline for submissions
