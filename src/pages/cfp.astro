@@ -3,10 +3,51 @@ import Layout from "../layouts/Layout.astro";
 import HeaderHero from '../components/HeaderHero.astro';
 import Topic from '../components/Topic.astro';
 import {Image} from 'astro:assets';
+
+const schema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Call for Papers",
+    "description": "Information about the call for papers for the web development conference.",
+    "mainEntity": {
+        "@type": "Event",
+        "name": "Web Development Conference",
+        "description": "The premier event for web developers, bringing together industry experts...",
+        "location": {
+            "@type": "Place",
+            "name": "Cityville Conference Center",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "123 Conference Center Drive",
+                "addressLocality": "Cityville",
+                "addressRegion": "State",
+                "postalCode": "12345",
+                "addressCountry": "Country"
+            }
+        },
+        "startDate": "2024-09-01",
+        "endDate": "2024-09-30",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+        "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/PreOrder",
+            "url": "https://example.com/call-for-papers",
+            "price": "0"
+        },
+        "image": "https://example.com/conference-image.jpg",
+        "performer": {
+            "@type": "Organization",
+            "name": "Web Development Conference",
+            "url": "https://example.com"
+        }
+    }
+}
+
 ---
 
 
-<Layout title='Call For Papers'>
+<Layout title='Call For Papers' schema={schema}>
     <main>
         <HeaderHero>
             <span slot="title">Call For Papers</span>
