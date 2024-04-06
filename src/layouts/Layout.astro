@@ -4,9 +4,10 @@ import {SITE_TITLE} from "../consts";
 
 interface Props {
 	title: string;
+	schema?: object;
 }
 
-const { title } = Astro.props;
+const { title, schema } = Astro.props;
 const metaTitle = `${SITE_TITLE} - ${title}`
 ---
 
@@ -19,7 +20,7 @@ const metaTitle = `${SITE_TITLE} - ${title}`
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{metaTitle}</title>
-		<slot name="jsonld" />
+		<script type="application/ld+json" set:html={JSON.stringify(schema)} />
 	</head>
 	<body>
 	<Drawer>

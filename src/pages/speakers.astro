@@ -33,11 +33,10 @@ const schema = {
     }))
 }
 
-
 ---
 
 
-<Layout title={SITE_TITLE}>
+<Layout title={SITE_TITLE} schema={schema}>
     <main>
         <HeaderHero>
             <span slot="title">Speakers</span>
@@ -53,6 +52,5 @@ const schema = {
                     </li>)}
         </ul>
     </main>
-    <script slot="jsonld" type="application/ld+json" set:html={JSON.stringify(schema)} />
 </Layout>
 
