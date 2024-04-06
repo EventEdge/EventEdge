@@ -2,10 +2,59 @@
 import {SITE_TITLE} from "../consts";
 import Layout from "../layouts/Layout.astro";
 import HeaderHero from '../components/HeaderHero.astro';
+
+const schema= {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Web Development Conference Agenda",
+    "description": "The agenda for the web development conference.",
+    "startDate": "2024-05-15T09:00:00-07:00",
+    "endDate": "2024-05-16T17:00:00-07:00",
+    "location": {
+        "@type": "Place",
+        "name": "Cityville Conference Center",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Conference Center Drive",
+            "addressLocality": "Cityville",
+            "addressRegion": "State",
+            "postalCode": "12345",
+            "addressCountry": "Country"
+        }
+    },
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventSchedule": [
+        {
+            "@type": "Schedule",
+            "startDate": "2024-05-15T09:00:00-07:00",
+            "endDate": "2024-05-15T12:00:00-07:00",
+            "name": "Morning Session",
+            "description": "Various talks and workshops on web development topics.",
+            "subEvent": [
+                {
+                    "@type": "Event",
+                    "name": "Keynote Address",
+                    "description": "Opening keynote presentation by industry leader.",
+                    "startDate": "2024-05-15T09:00:00-07:00",
+                    "endDate": "2024-05-15T10:00:00-07:00"
+                },
+                {
+                    "@type": "Event",
+                    "name": "Panel Discussion: Trends in Web Development",
+                    "description": "Panel discussion featuring experts in the field.",
+                    "startDate": "2024-05-15T10:15:00-07:00",
+                    "endDate": "2024-05-15T12:00:00-07:00"
+                }
+            ]
+        }
+    ]
+}
+
 ---
 
 
-<Layout title={SITE_TITLE}>
+<Layout title={SITE_TITLE} schema={schema}>
     <main>
         <HeaderHero>
             <span slot="title">Agenda</span>
