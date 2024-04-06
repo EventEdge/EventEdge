@@ -1,5 +1,7 @@
 import type {INavigationLink} from "./models/navigation-link.model.ts";
 
+export const SITE_DOMAIN = "https://eventedge.com";
+
 export const SITE_TITLE = "EventEdge";
 
 export const NAVIGATION_LINKS: Array<INavigationLink> = [
