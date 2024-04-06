@@ -8,10 +8,52 @@ import { getCollection } from 'astro:content';
 
 const crewEntries = await getCollection('crew');
 
+const schema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "About Us",
+    "description": "Information about the team and the web development conference.",
+    "mainEntity": {
+        "@type": "Organization",
+        "name": "Web Development Conference",
+        "description": "The premier event for web developers, bringing together industry experts...",
+        "url": "https://example.com",
+        "foundingDate": "2020-01-01",
+        "founders": [
+            {
+                "@type": "Person",
+                "name": "John Doe",
+                "jobTitle": "Founder & CEO"
+            },
+            {
+                "@type": "Person",
+                "name": "Jane Smith",
+                "jobTitle": "Co-founder & CTO"
+            }
+        ],
+        "location": {
+            "@type": "Place",
+            "name": "Cityville Conference Center",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "123 Conference Center Drive",
+                "addressLocality": "Cityville",
+                "addressRegion": "State",
+                "postalCode": "12345",
+                "addressCountry": "Country"
+            }
+        },
+        "sameAs": [
+            "https://twitter.com/example",
+            "https://www.linkedin.com/company/example"
+        ]
+    }
+}
+
 ---
 
 
-<Layout title={SITE_TITLE}>
+<Layout title={SITE_TITLE} schema={schema}>
     <main>
         <HeaderHero>
             <span slot="title">About</span>
