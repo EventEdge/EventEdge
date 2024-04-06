@@ -19,3 +19,5 @@ export const SOCIAL_LINKS = {
     // TODO : add logo for linkedin: instagram: 'https://instagram.com/eventedge',
     youtube: 'https://youtube.com/eventedge',
 };
+
+export const CFP_LINK = 'https://google.com';
