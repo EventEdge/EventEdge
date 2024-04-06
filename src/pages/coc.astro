@@ -1,11 +1,55 @@
 ---
-import {SITE_TITLE} from "../consts";
+import {SITE_TITLE, SITE_DOMAIN} from "../consts";
 import Layout from "../layouts/Layout.astro";
 import HeaderHero from '../components/HeaderHero.astro';
+
+const schema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Code of Conduct",
+    "description": "The code of conduct for the web development conference.",
+    "mainEntity": {
+        "@type": "CreativeWork",
+        "name": "Code of Conduct",
+        "description": "The code of conduct outlines expected behavior for all participants at the web development conference...",
+        "url": `${SITE_DOMAIN}/coc`,
+        "author": {
+            "@type": "Organization",
+            "name": "Event org"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Event name",
+            "legalName": "Event name",
+            "brand": "",
+            "founders": [
+                {
+                    "@type": "Person",
+                    "name": "John Doe"
+                }
+            ],
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "contactType": "customer service",
+                "telephone": "[+1-555-555-5555]",
+                "email": ""
+            },
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://example.com/logo.png"
+            },
+            "memberOf": {
+                "@type": "Organization",
+                "name": "Event name",
+            }
+        }
+    }
+}
+
 ---
 
 
-<Layout title={SITE_TITLE}>
+<Layout title={SITE_TITLE} schema={schema}>
     <main>
         <HeaderHero>
             <span slot="title">Code of conduct</span>
