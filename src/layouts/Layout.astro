@@ -29,6 +29,11 @@ const metaTitle = `${SITE_TITLE} - ${title}`
 	</body>
 </html>
 <style is:global>
+	@font-face {
+		font-family: "Luciole";
+		src: url("../../public/fonts/Luciole-regular.ttf");
+	}
+
 	:root {
 		--accent: 136, 58, 234;
 		--accent-light: 224, 204, 250;
@@ -41,7 +46,7 @@ const metaTitle = `${SITE_TITLE} - ${title}`
 		);
 	}
 	html {
-		font-family: system-ui, sans-serif;
+		font-family: "Luciole", sans-serif;
 		background: #13151a;
 		background-size: 224px;
 	}
