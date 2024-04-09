@@ -8,10 +8,13 @@ export interface Props {
 
 const {speaker} = Astro.props;
 ---
-<div class="avatar flex flex-col items-center gap-2 max-w-64">
-    <div class="mask mask-squircle hover:scale-110">
-        <Image height={64} width={64} format="webp" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="" />
+<figure class="avatar flex flex-col items-center gap-2 max-w-64">
+    <div class="mask mask-squircle">
+        <Image height={64} width={64} format="webp"
+               src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" alt=""/>
     </div>
-    <h2 class="text-3xl font-bold">{speaker.name}</h2>
-    <p class="text-center">{speaker.description}</p>
-</div>
+    <figcaption class="flex flex-col items-center">
+        <h2 class="text-3xl font-bold">{speaker.name}</h2>
+        <p class="text-center">{speaker.description}</p>
+    </figcaption>
+</figure>
